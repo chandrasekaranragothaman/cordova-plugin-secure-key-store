@@ -54,7 +54,7 @@ The KeychainItemWrapper class is an abstraction layer for the iPhone Keychain co
 simple wrapper to provide a distinct barrier between all the idiosyncracies involved with the Keychain
 CF/NS container objects.
 */
-@interface KeychainItemWrapper : NSObject
+@interface KeychainItemWrapperRename : NSObject
 
 // Designated initializer.
 - (id)initWithIdentifier : (NSString *)identifier accessGroup : (NSString *)accessGroup;

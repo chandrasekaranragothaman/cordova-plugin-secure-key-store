@@ -21,7 +21,7 @@
 #import <Foundation/Foundation.h>
 #import <Cordova/CDV.h>
 
-#import "KeychainItemWrapper.h"
+#import "KeychainItemWrapperRename.h"
 
 @interface SecureKeyStore : CDVPlugin {
 }

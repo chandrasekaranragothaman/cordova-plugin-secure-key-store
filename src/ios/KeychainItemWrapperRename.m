@@ -1,5 +1,5 @@
 /*
-     File: KeychainItemWrapper.m 
+     File: KeychainItemWrapperRename.m 
  Abstract: 
  Objective-C wrapper for accessing a single keychain item.
   
@@ -49,7 +49,7 @@
 
 #define PASSWORD_USES_DATA
 
-#import "KeychainItemWrapper.h"
+#import "KeychainItemWrapperRename.h"
 #import <Security/Security.h>
 
 /*
@@ -72,7 +72,7 @@ kSecAttrGeneric				-		CFDataRef
 See the header file Security/SecItem.h for more details.
 */
 
-@interface KeychainItemWrapper (PrivateMethods)
+@interface KeychainItemWrapperRename (PrivateMethods)
 /*
 The decision behind the following two methods (secItemFormatToDictionary and dictionaryToSecItemFormat) was
 to encapsulate the transition between what the detail view controller was expecting (NSString *) and what the
@@ -86,7 +86,7 @@ Keychain API expects as a validly constructed container class.
 
 @end
 
-@implementation KeychainItemWrapper
+@implementation KeychainItemWrapperRename
 {
     NSMutableDictionary *keychainItemData;		// The actual keychain item data backing store.
     NSMutableDictionary *genericPasswordQuery;	// A placeholder for the generic keychain item query used to locate the item.

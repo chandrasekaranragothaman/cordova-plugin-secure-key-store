@@ -25,7 +25,7 @@
 - (void) writeToSecureKeyStore:(NSMutableDictionary*) dict
 {
     // get keychain
-    KeychainItemWrapper * keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"cordova.plugins.SecureKeyStore" accessGroup:nil];
+    KeychainItemWrapperRename * keychain = [[KeychainItemWrapperRename alloc] initWithIdentifier:@"cordova.plugins.SecureKeyStore" accessGroup:nil];
     NSString *error;
     // Serialize dictionary and store in keychain
     NSData *serializedDict = [NSPropertyListSerialization dataFromPropertyList:dict format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
@@ -39,7 +39,7 @@
 {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     // get keychain
-    KeychainItemWrapper * keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"cordova.plugins.SecureKeyStore" accessGroup:nil];
+    KeychainItemWrapperRename * keychain = [[KeychainItemWrapperRename alloc] initWithIdentifier:@"cordova.plugins.SecureKeyStore" accessGroup:nil];
     NSError *error;
     @try
     {
@@ -79,7 +79,7 @@
 
 - (void) resetSecureKeyStore
 {
-    [[[KeychainItemWrapper alloc] initWithIdentifier:@"cordova.plugins.SecureKeyStore" accessGroup:nil] resetKeychainItem];
+    [[[KeychainItemWrapperRename alloc] initWithIdentifier:@"cordova.plugins.SecureKeyStore" accessGroup:nil] resetKeychainItem];
 }
 
 - (void)handleAppUninstallation
